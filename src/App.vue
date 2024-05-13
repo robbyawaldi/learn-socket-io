@@ -2,8 +2,9 @@
 import { io } from "socket.io-client";
 import { onMounted, ref } from "vue";
 
-const socket = io("ws://localhost:3000", {
-  autoConnect: true,
+const socket = io("ws://localhost:5173", {
+  path: "/socket",
+  autoConnect: false,
 });
 
 const data = ref<string[]>([]);
